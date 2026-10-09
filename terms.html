@@ -3,20 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MailDesk Terms of Service</title>
+    <meta name="color-scheme" content="light dark">
+    <title>MailDesk Terms of Use</title>
     <style>
+      :root {
+        --text: #1b1f24;
+        --muted: #5b6471;
+        --background: #f6f8fa;
+        --link: #0f6cbd;
+        --rule: #dde2e9;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #e6e9ee;
+          --muted: #a5aebb;
+          --background: #16181c;
+          --link: #63b1f5;
+          --rule: #2d3138;
+        }
+      }
+
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
         line-height: 1.6;
-        color: #202124;
-        background: #f8fafc;
+        color: var(--text);
+        background: var(--background);
       }
 
       main {
-        max-width: 820px;
+        max-width: 780px;
         margin: 0 auto;
-        padding: 48px 24px;
+        padding: 48px 24px 72px;
       }
 
       h1,
@@ -24,69 +43,88 @@
         line-height: 1.25;
       }
 
-      .updated {
-        color: #5f6368;
+      h2 {
+        margin-top: 2.2em;
+        padding-top: 1.2em;
+        border-top: 1px solid var(--rule);
+        font-size: 1.25rem;
+      }
+
+      .updated,
+      .back {
+        color: var(--muted);
       }
 
       a {
-        color: #0b57d0;
+        color: var(--link);
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>MailDesk Terms of Service</h1>
-      <p class="updated">Last updated: June 25, 2026</p>
+      <p class="back"><a href="./">MailDesk</a></p>
+      <h1>MailDesk Terms of Use</h1>
+      <p class="updated">Last updated: October 9, 2026</p>
 
       <p>
-        MailDesk is a Windows desktop mail client focused on Gmail workflows.
-        By using MailDesk, you agree to these terms.
+        MailDesk is an email client for Windows. By using MailDesk you agree
+        to these terms.
       </p>
 
-      <h2>Use of the App</h2>
+      <h2>Your accounts</h2>
       <p>
-        You are responsible for the Google account you connect to MailDesk and
-        for complying with Google's terms and policies when using Gmail through
-        the app.
+        MailDesk connects to mailboxes that you add. You are responsible for
+        the accounts you connect and for following the terms of the mail
+        providers that host them. Only add accounts that you are allowed to
+        use.
       </p>
 
-      <h2>Google Account Access</h2>
+      <h2>Access to your mail</h2>
       <p>
-        MailDesk accesses Gmail data only after you sign in with a Google
-        account and grant permission. You can revoke MailDesk access at any time
-        from your Google Account security settings.
+        MailDesk signs in to your mailbox with the app password, password, or
+        Microsoft sign-in that you provide, and acts there only as a mail
+        client on your behalf. You can end this access at any time by removing
+        the account in MailDesk, by deleting the app password at your
+        provider, or, for Outlook.com and Hotmail, by withdrawing the access
+        in your Microsoft account.
       </p>
 
-      <h2>Local Data</h2>
+      <h2>Your data</h2>
       <p>
-        MailDesk stores OAuth tokens, mail cache, settings, logs, and
-        notification state locally on your Windows device to provide the app's
-        mail client features.
+        MailDesk stores sign-in details, a copy of recent mail, settings, and
+        a diagnostic log on your PC, and nowhere else. The
+        <a href="privacy.html">MailDesk Privacy Policy</a> describes this in
+        detail.
       </p>
 
-      <h2>Acceptable Use</h2>
+      <h2>Acceptable use</h2>
       <p>
-        Do not use MailDesk to violate laws, abuse Google services, send spam,
-        or access accounts or data that you are not authorized to use.
+        Do not use MailDesk to break the law, to send spam, to misuse the
+        services of a mail provider, or to access accounts or data that you
+        are not authorized to use.
       </p>
 
-      <h2>No Warranty</h2>
+      <h2>No warranty</h2>
       <p>
-        MailDesk is provided as is, without warranties of any kind. The app may
-        change over time, and availability can depend on Google APIs, Microsoft
-        Windows, and Microsoft Store distribution.
+        MailDesk is provided as is, without warranties of any kind, to the
+        extent the law allows. Whether MailDesk works with a mailbox depends
+        on the mail provider, on Microsoft Windows, and on the Microsoft
+        Store, all of which can change. Deleting mail in MailDesk deletes it
+        in your mailbox; keep your own copies of anything you cannot afford to
+        lose.
+      </p>
+
+      <h2>Other companies</h2>
+      <p>
+        MailDesk is an independent app. It is not affiliated with, or endorsed
+        by, Google, Microsoft, Yahoo, or Apple. Their names are used only to
+        say which mail services MailDesk works with.
       </p>
 
       <h2>Changes</h2>
       <p>
-        These terms may be updated as MailDesk changes. The latest version will
-        be published on this page.
-      </p>
-
-      <h2>Privacy</h2>
-      <p>
-        For details about data access and handling, see the
-        <a href="privacy.html">MailDesk Privacy Policy</a>.
+        These terms may be updated as MailDesk changes. The current version is
+        always on this page.
       </p>
     </main>
   </body>

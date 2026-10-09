@@ -3,35 +3,88 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="MailDesk is an email client for Windows. It connects directly to your mail provider over IMAP and SMTP.">
     <title>MailDesk</title>
     <style>
+      :root {
+        --text: #1b1f24;
+        --muted: #5b6471;
+        --background: #f6f8fa;
+        --link: #0f6cbd;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #e6e9ee;
+          --muted: #a5aebb;
+          --background: #16181c;
+          --link: #63b1f5;
+        }
+      }
+
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
         line-height: 1.6;
-        color: #202124;
-        background: #f8fafc;
+        color: var(--text);
+        background: var(--background);
       }
 
       main {
-        max-width: 760px;
+        max-width: 720px;
         margin: 0 auto;
-        padding: 48px 24px;
+        padding: 48px 24px 72px;
+      }
+
+      li {
+        margin: 0.4em 0;
+      }
+
+      .links {
+        color: var(--muted);
       }
 
       a {
-        color: #0b57d0;
+        color: var(--link);
       }
     </style>
   </head>
   <body>
     <main>
       <h1>MailDesk</h1>
-      <p>MailDesk is a Windows desktop mail client focused on Gmail workflows.</p>
       <p>
+        MailDesk is an email client for Windows. It connects from your PC
+        directly to your mail provider over the standard mail protocols, IMAP
+        and SMTP, and keeps your mail and your sign-in details on your PC.
+      </p>
+      <ul>
+        <li>
+          Several accounts side by side, with one inbox for all of them.
+        </li>
+        <li>
+          Works with Gmail (with a Google app password), Outlook.com and
+          Hotmail (with Microsoft sign-in), Yahoo, iCloud, and other providers
+          that offer IMAP and SMTP.
+        </li>
+        <li>
+          Folders, search, attachments, and writing, replying to, and
+          forwarding mail.
+        </li>
+        <li>
+          New-mail notifications, with verification codes that can be copied
+          with one click.
+        </li>
+        <li>No advertising, no analytics, and no MailDesk account.</li>
+      </ul>
+      <p class="links">
         <a href="privacy.html">Privacy Policy</a>
         ·
-        <a href="terms.html">Terms of Service</a>
+        <a href="terms.html">Terms of Use</a>
+      </p>
+      <p class="links">
+        MailDesk is an independent app. It is not affiliated with, or endorsed
+        by, Google, Microsoft, Yahoo, or Apple.
       </p>
     </main>
   </body>
