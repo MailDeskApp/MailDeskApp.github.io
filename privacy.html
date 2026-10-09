@@ -165,13 +165,18 @@
         <li>
           <strong>Server lookup.</strong> When you add an account at a
           provider MailDesk has no built-in settings for, and you do not enter
-          the server settings yourself, MailDesk looks them up. It asks the
-          autoconfiguration service of your mail domain, or of the company
-          that hosts its mail, which receives your email address, and two
-          public services that receive only the domain (the part after the
-          @): Mozilla's database of mail providers and Google Public DNS.
-          Your password is not part of any lookup. Turn on manual server
-          settings to avoid the lookup.
+          the server settings yourself, MailDesk looks them up. Every lookup
+          uses an encrypted connection (HTTPS). MailDesk first asks the
+          autoconfiguration service of your mail domain, which receives your
+          email address. Only if that gives no answer does it ask two public
+          services, which receive nothing but the domain (the part after the
+          @): Mozilla's database of mail providers and, if the domain is not
+          listed there, Google Public DNS, to find the company that receives
+          the domain's mail and look that company up in Mozilla's database.
+          Your password is not part of any lookup. MailDesk shows you the
+          servers it found, and sends your password to them only when you
+          then choose to connect. Turn on manual server settings to avoid the
+          lookup.
         </li>
         <li>
           <strong>Pictures in messages.</strong> Messages can contain
@@ -187,9 +192,12 @@
       </ul>
       <p>
         Connections to Gmail, Microsoft, Yahoo, and iCloud are always
-        encrypted. For other providers MailDesk uses the encryption that the
-        provider's settings call for; you can check and change it in the
-        manual server settings.
+        encrypted. For other providers, MailDesk accepts servers from a
+        lookup only if they use encryption (SSL/TLS or STARTTLS); in the
+        manual server settings you choose the encryption yourself. An account
+        that was added with MailDesk 1.0 keeps the settings it was added
+        with, which for a few providers encrypt the connection only if the
+        server offers it.
       </p>
 
       <h2>Notifications and verification codes</h2>
